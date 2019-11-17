@@ -6,9 +6,16 @@ xmlns:f="http://java.sun.com/jsf/core"
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>index.xhtml User Registration Form</title>
-     </h:head>
+ </h:head>
        <body>
+<h:outputLink value="tovars.xhtml" >
+	tovars.xhtml
+</h:outputLink>
 	    <h3>Hello index.xhtml</h3>
+	     <p> link to </p>
+<h:link value="Login page + Param " outcome="login" >
+	<f:param name="username" value="us" />
+</h:link>
 	      <h:body>
 		   <h:form id="form">
 			 <table>

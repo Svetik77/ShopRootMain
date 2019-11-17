@@ -26,11 +26,13 @@ public class ThingsManagerBean {
 		entityManager.persist(order);
 		return order;
 	}
-	/** adminka  simelar delete thing*/ 
-	public Thing createThing(String name, int price) {
+	/** adminka  similar delete thing*/ 
+//	public Thing createThing(String name, int price) {
+	public Thing createThing(String name, int quantity) {
 		Thing thing = new Thing();
 		thing.setName(name);
-		thing.setPrice(price);
+//		thing.setPrice(price);
+		thing.setQuantity(quantity);;
 		entityManager.persist(thing);
 		return thing;
 	}

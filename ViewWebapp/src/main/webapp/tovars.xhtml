@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:sql="http://java.sun.com/jsp/jstl/sql"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>tovars.xhtml User Registration Form</title>
+ </h:head>
+<body>
+	<h3>tovars.xhtml</h3>
+	<h:body>
+
+		<h:form>
+			<table>
+				<tr>
+				 <td><h:inputText value="#{orderBean.name}" /></td>
+				 <td><h:inputText value="#{orderBean.price}" /></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>Price</td>
+				</tr>
+				<tr>
+					<td><h:commandButton action="#{orderBean.createThing()}" value="create thing" /></td>
+					<td><h:commandButton action="#{orderBean.createOrder()}" value="create Order" /></td>
+				</tr>
+			</table>
+			<h:dataTable value="#{orderBean.thingsList}" var="thing">
+				<h:column>
+					<h:outputText value="#{thing.name}" />
+				</h:column>
+				<h:column>
+					<h:outputText value="#{thing.quantity}" />
+				</h:column>
+				<h:column>
+				<!-- var="thing" variable  -->
+					 <h:commandButton action="#{orderBean.addhing(thing)}" value="add tovar" /> 
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		
+		<!--  method from OrderBen , display what was added to bucket -->
+			<h:dataTable value="#{orderBean.thingsListInOrder}" var="thing">
+				<h:column>
+					<h:outputText value="#{thing.name}" />
+				</h:column>
+				<h:column>
+					<h:outputText value="#{thing.quantity}" />
+				</h:column>
+			</h:dataTable>
+
+	</h:body>
+
+</body>
+</html>
