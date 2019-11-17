@@ -2,6 +2,9 @@
     <wb-module deploy-name="ViewWebapp-1.0-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="LogicEJB-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LogicEJB/LogicEJB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ViewWebapp"/>
         <property name="java-output-path" value="/ViewWebapp/target/classes"/>
     </wb-module>
