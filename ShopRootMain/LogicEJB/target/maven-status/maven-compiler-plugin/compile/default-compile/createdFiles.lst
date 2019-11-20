@@ -1,0 +1,5 @@
+boostbrain\ejb\ThingsManagerBean.class
+boostbrain\domain\ThingInOrder.class
+boostbrain\ejb\OrderManagerBean.class
+boostbrain\domain\Order.class
+boostbrain\domain\Thing.class
