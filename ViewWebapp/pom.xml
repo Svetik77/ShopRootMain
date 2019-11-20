@@ -25,18 +25,21 @@
 			<artifactId>LogicEJB</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+<!-- /LogicEJB/target/LogicEJB-1.0-SNAPSHOT.jar -->
 
 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-web-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.faces</groupId>
-			<artifactId>jsf-api</artifactId>
-			<version>2.1</version>
-		</dependency>
+	<!-- doesn't work with tomcat, it has no such libraries !!!!!  -->
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+		
 	</dependencies>
 
 	<build>
